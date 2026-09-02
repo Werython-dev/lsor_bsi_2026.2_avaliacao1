@@ -10,7 +10,7 @@ Este repositório é o modelo oficial para a realização e entrega da **Avalia�
 1. Certifique-se de estar logado em sua conta do GitHub.
 2. Neste repositório de template do professor, clique no botão verde **"Use this template"** (Usar este modelo) -> **"Create a new repository"** (Criar um novo repositório).
 3. Configure as propriedades do seu novo repositório pessoal:
-   * **Repository name:** `lsor-avaliacao1`
+   * **Repository name:** `lsorbsi2026.2-<nomedoaluno>-avaliacao1`
    * **Visibility:** Defina obrigatoriamente como **Private** (Privado) para evitar cópias e garantir a autoria individual de sua prova.
 4. Após criar, vá em **Settings** -> **Collaborators** -> **Add people** e adicione o perfil do professor (`alaelson`) como colaborador para que ele possa acessar e corrigir sua entrega.
 
