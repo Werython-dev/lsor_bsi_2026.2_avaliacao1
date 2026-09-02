@@ -1,0 +1,1 @@
+# lsor_2026.2_avaliacao1
