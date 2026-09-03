@@ -7,10 +7,10 @@
 ---
 
 ## 👤 Identificação do Aluno
-*   **Nome Completo:** [Preencha aqui seu nome]
+*   **Nome Completo:** Werython Rocha Santo
 *   **Matrícula:** [Preencha aqui sua matrícula]
 *   **Link do Repositório Pessoal no GitHub:** [Preencha aqui o link do seu repositório]
-*   **Data de Realização:** [Preencha aqui a data]
+*   **Data de Realização:** 02-09-2026
 
 ---
 
@@ -32,13 +32,23 @@ O professor disponibilizou uma máquina virtual pré-configurada em formato `.ov
 *   **Credenciais de Acesso ao Servidor de Arquivos:** Usuário: `alunoifal` | Senha: `alunoifal`
 
 **A) Prática:** Copie o arquivo `.ova` do servidor de arquivos para o drive `C:` local da sua máquina host de laboratório e importe a máquina virtual para o Oracle VM VirtualBox.
-> **🖼️ INSERIR PRINT DA VM IMPORTADA ATIVA NO SEU VIRTUALBOX AQUI**
-> *(A captura de tela deve mostrar a janela do VirtualBox com a VM `UbuntuAvaliacao1` em execução e o console de login ativo).*
+<img width="1892" height="1014" alt="image" src="https://github.com/user-attachments/assets/ee51b2e1-4450-47c9-8444-5b67eedae896" />
+
 
 **B) Teórica:** Descreva detalhadamente as etapas executadas para obter e importar o arquivo `.ova` no seu computador hospedeiro (host Windows). Explique também qual é a diferença teórica de portabilidade entre importar um arquivo empacotado `.ova` (Open Virtualization Format) e instalar um sistema operacional do zero a partir de uma mídia `.iso`.
 
 *   **Sua resposta teórica:**
-    [Substitua este texto pela sua resposta técnica]
+    Baixei o arquivo
+    abri o virtual box
+    selecionei em importar appliance
+    escolhi o arquivo ova
+    conferi/ajustei os recursos da máquina
+    cliquei em importar
+    iniciei a máquina virtual
+
+   A .OVA contém uma máquina virtual já configurada, incluindo sistema operacional, disco virtual
+
+   .ISO = é uma mídia de instalação, o sistema operacional precisa ser instalado e configurado novamente.
 
 ---
 
@@ -52,12 +62,13 @@ Após fazer login na máquina virtual importada com as credenciais padrões de a
 4.  Usuário: **`renan`** | Senha: **`renan14`**
 
 > **🖼️ INSERIR PRINT DO TERMINAL EXECUTANDO A CRIAÇÃO DE UM DOS USUÁRIOS E ASSOCIAÇÃO AO GRUPO AQUI**
-> *(A captura de tela deve demonstrar a saída dos comandos aplicados no console).*
+<img width="1029" height="647" alt="image" src="https://github.com/user-attachments/assets/0c7e0d57-dbad-4e8d-a33b-bd7fd6bd58b5" />
 
 **B) Teórica:** Do ponto de vista de administração de sistemas Linux, qual é a diferença técnica e o nível de segurança envolvidos na criação de usuários locais usando o comando interativo `adduser` em comparação com o comando de baixo nível `useradd`? Além disso, explique qual a vantagem administrativa de gerenciar permissões por meio de grupos de trabalho complementares em vez de atribuir permissões individuais.
 
 *   **Sua resposta teórica:**
-    [Substitua este texto pela sua resposta técnica]
+   adduser é um comando de alto nível e interativo. Automatiza a criação do usúario, diretório pessoal, grupo, reduzindo erros administrativos.
+    useradd é um comando de baixo nível, mais manual e flexível.
 
 ---
 
@@ -65,14 +76,12 @@ Após fazer login na máquina virtual importada com as credenciais padrões de a
 Após a criação e organização das contas, o administrador de sistemas deve inspecionar as bases administrativas para auditar se os registros foram integrados com sucesso.
 
 **A) Prática:** Execute os comandos necessários no terminal para auditar e exibir as contas criadas (`luiz`, `flavio`, `augusto`, `renan`), bem como o grupo `presidenciaveis` com todos os seus respectivos membros associados.
-> **🖼️ INSERIR PRINT EXIBINDO AS ÚLTIMAS ENTRADAS DOS COMANDOS DE AUDITORIA AQUI**
-> *(A captura de tela deve exibir a saída do terminal comprovando a existência dos usuários e o vínculo com o grupo).*
+> <img width="914" height="421" alt="image" src="https://github.com/user-attachments/assets/7a6e1435-51c5-4c0f-bad3-e807fc8253c2" />
 
 **B) Teórica:** Descreva o papel técnico do utilitário **`getent`** no Linux e qual a sua vantagem funcional em relação à simples leitura manual dos arquivos estáticos `/etc/passwd` e `/etc/group` utilizando comandos como `cat`.
 
-*   **Sua resposta teórica:**
-    [Substitua este texto pela sua resposta técnica]
-
+*   Ele faz um "print" dos valores que foram acrescidos nos determinados repositórios, o cat ele puxa o referido repositório e o getent printa as informações na tela.
+    
 ---
 
 ### 📄 QUESTÃO 4: Cadastro Eleitoral em Formato Estruturado (JSON)
@@ -101,7 +110,7 @@ Cada um dos candidatos recém-criados deve possuir um arquivo de identificação
 **B) Teórica:** O que é o formato JSON (JavaScript Object Notation)? Por que ele é amplamente adotado em sistemas operacionais modernos, servidores e integrações de rede para troca de informações estruturadas em comparação com arquivos de texto puro não estruturados?
 
 *   **Sua resposta teórica:**
-    [Substitua este texto pela sua resposta técnica]
+   O formato JSON é um objeto. Utiliza o formato de codificação em lista em javascript, onde contém informações que serão "traduzidas" para o compilador que será enviada, é muito utilizado pois é de fácil leitura por parte dos navegadores atuais.
 
 ---
 
@@ -115,7 +124,7 @@ O sistema precisa de uma pasta centralizada na raiz do disco para organizar a co
 **B) Teórica:** Explique teoricamente as regras do padrão FHS (Filesystem Hierarchy Standard) do Linux. Por que a criação de diretórios personalizados diretamente na raiz `/` (como `/eleicoes`) é incomum em sistemas de produção? Qual pasta padrão da árvore FHS seria mais adequada para armazenar dados de serviços compartilhados de uma aplicação de acordo com essa especificação?
 
 *   **Sua resposta teórica:**
-    [Substitua este texto pela sua resposta técnica]
+    O padrão FHS é um sistema de diretórios do Linux, onde sua estrutura é hierarquizada como se fosse uma árvore. o sistema melhor implantado seria ao invés de criar diretamente na raiz, ser criado um diretório do usuário em que está utilizando e posteriormente sendo anexo o arquivo em que será compartilhado. poderá criar um diretório adicional dentro do /home do usuário onde irá armazenar o arquivo.
 
 ---
 
@@ -171,7 +180,7 @@ echo "Resultado gravado em: $ARQUIVO_SAIDA"
 **B) Teórica:** Explique conceitualmente para que serve a linha inicial `#!/bin/bash` (Shebang) presente no script. O que ocorre se ela for omitida ou escrita de forma incorreta? Qual o papel do laço `for` utilizado no script para a busca automatizada dos arquivos?
 
 *   **Sua resposta teórica:**
-    [Substitua este texto pela sua resposta técnica]
+   Encaminha para o arquivo que será digitado via bash e ocorrerá a assinatura como arquivo txt, o for ele percorre o script para que após ser respondido uma das opções oferecidas ao usuário, automaticamente passará para a próxima.
 
 ---
 
@@ -185,7 +194,7 @@ Por padrão, arquivos de texto criados no Linux não possuem permissão de execu
 **B) Teórica:** Como se configura a permissão de execução de um arquivo no Linux? Explique detalhadamente o comando utilizado, o papel do bit de execução (`x`), e a diferença metodológica entre conceder permissão de forma simbólica (ex: `chmod +x`) e de forma octal/numérica.
 
 *   **Sua resposta teórica:**
-    [Substitua este texto pela sua resposta técnica]
+    x = significa execute, é uma sigla de execução, temos w = writer, r = read e x de execute. para vereficarmos quais usuários contêm determinada permissão. exemplo -755 - significa dizer que o "dono" terá acesso ao read,write e o execute e os demais (grupo e outros) terão acesso apenas read e ao execute, o chmod serve par alterar a permissão que o usuário, grupos ou outros têm.
 
 ---
 
@@ -199,7 +208,7 @@ Agora é o momento de rodar a rotina de automação e gerar o arquivo oficial de
 **B) Teórica:** No script utilizado, como funciona o redirecionamento de saídas usando os operadores `>` (gravação simples) e `>>` (anexação)? O que aconteceria com os dados do arquivo de saída se o script utilizasse apenas o operador `>` em todas as linhas?
 
 *   **Sua resposta teórica:**
-    [Substitua este texto pela sua resposta técnica]
+    
 
 ---
 
@@ -213,7 +222,7 @@ Com o relatório `/eleicoes/presidenciaveis2026.txt` gerado, você deve realizar
 **B) Teórica:** Explique em quais cenários de administração e monitoramento de servidores Linux o uso de comandos de filtragem (como os que exibem o topo e o fim de arquivos) é preferível em detrimento da abertura completa do arquivo em editores de texto interativos como Nano ou Vim.
 
 *   **Sua resposta teórica:**
-    [Substitua este texto pela sua resposta técnica]
+    Quando se deseja respostas rápidas ou especificas que não precisam de tanta especificações ou detalhamentos.
 
 ---
 
@@ -227,7 +236,7 @@ Para a criação do arquivo `cadastroeleitoral.txt` (Questão 4), foi necessári
 **B) Teórica:** Explique detalhadamente a diferença prática e conceitual que ocorre no terminal ao alternar usuários com e sem o hífen (`-`). Por que o uso do hífen é indispensável para garantir a validação de segurança e carregamento correto das permissões locais em ambientes de teste?
 
 *   **Sua resposta teórica:**
-    [Substitua este texto pela sua resposta técnica]
+    pois o "-" indica que ele está anexado a um diretório.
 
 ---
 *Fim do Modelo de Entrega — Certifique-se de realizar o commit de todos os arquivos de relatório e enviar o link público no formulário do Google Forms dentro do prazo estabelecido.*
